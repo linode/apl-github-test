@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
+    "release-please": "^16.15.0",
     "standard-version": "^9.5.0"
   }
 }
