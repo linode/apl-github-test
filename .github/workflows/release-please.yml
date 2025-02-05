@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    if: always() && (startsWith(github.ref, 'refs/heads/releases/') || startsWith(github.ref, 'refs/heads/main')) && startsWith(github.event.head_commit.message, 'chore(release)') && !github.event.act
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
