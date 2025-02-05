@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.1](https://github.com/linode/apl-github-test/compare/v3.0.0...v3.0.1) (2025-02-05)
+
+
+### Bug Fixes
+
+* small fix ([#20](https://github.com/linode/apl-github-test/issues/20)) ([d53ed42](https://github.com/linode/apl-github-test/commit/d53ed422d1c34c2606d24a8abd22525d1570d5a7))
+
 ## [3.0.0](https://github.com/linode/apl-github-test/compare/v2.1.0...v3.0.0) (2025-02-05)
 
 
