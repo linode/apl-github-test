@@ -13,20 +13,10 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-    #   - uses: googleapis/release-please-action@v4
-    #     with:
-    #       token: ${{ secrets.GITHUB_TOKEN }}
-    #       release-type: node
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Update package.json
-        run: |
-          npm install
-          # Check if the release-please-config.json file exists
-          if [ ! -f release-please-config.json ]; then
-              echo "release-please-config.json not found. Creating a new one."
-              npx release-please bootstrap --repo-url=https://github.com/linode/apl-github-test.git --release-type=node --token=${{ secrets.GITHUB_TOKEN }} --target-branch=main --initial-version 1.0.1
-              exit 0
-          fi
-          git status
+    #   - name: Checkout code
+    #     uses: actions/checkout@v4
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
           
