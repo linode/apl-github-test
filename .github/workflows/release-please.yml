@@ -14,7 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     if: always() && (startsWith(github.ref, 'refs/heads/releases/') || startsWith(github.ref, 'refs/heads/main')) && startsWith(github.event.head_commit.message, 'chore(release)') && !github.event.act
     steps:
-      - uses: googleapis/release-please-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: node
+    #   - uses: googleapis/release-please-action@v4
+    #     with:
+    #       token: ${{ secrets.GITHUB_TOKEN }}
+    #       release-type: node
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Update package.json
+        run: |
+          npm install
+          # Check if the release-please-config.json file exists
+          if [ ! -f release-please-config.json ]; then
+              echo "release-please-config.json not found. Exiting..."
+              release-please bootstrap --repo-url=https://github.com/linode/apl-github-test.git --release-type=node --token=${{ secrets.GITHUB_TOKEN }} --target-branch=main --initial-version 1.0.1
+              exit 0
+          fi
+          git status
+          
