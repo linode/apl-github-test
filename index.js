@@ -37,3 +37,15 @@ app.listen(port, () => {
 
 // BREAKING CHANGE
 // another BREAKING CHANGE
+
+//fix for v2.1.0
+
+//new feature on v3
+
+//small fix
+
+//another fix for 2.1
+
+// major change 
+
+// fix that we need also in v.3
