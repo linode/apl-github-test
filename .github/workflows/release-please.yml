@@ -20,4 +20,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
+          target-branch: ${{ github.ref_name }}
+          
           
