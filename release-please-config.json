@@ -9,7 +9,7 @@
       "draft": true,
       "prerelease": false,
       "changelog-sections": [
-        { "type": "chore", "section": "Miscellaneous Chores", "hidden": false }
+        { "type": "chore", "section": "Miscellaneous Chores", "hidden": true }
       ]
     }
   },
