@@ -1,5 +1,4 @@
 {
-  "last-release-sha": "ba7910a3904e0286906bdc700cf96d4597256a01",
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
