@@ -2,6 +2,11 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      dry-run:
+        type: boolean
+        description: 'Dry run'
+        default: true
 
 jobs:
   release-please:
@@ -12,10 +17,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      # - name: Install dependencies
-      #   run: npm clean-install
-      # - name: Release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: npx semantic-release
+      - name: Install dependencies
+        run: npm clean-install
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release --dry-run=${{ github.event.inputs.dry-run }}
           
