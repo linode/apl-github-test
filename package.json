@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
-    "release-please": "^16.15.0"
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "semantic-release": "^24.2.3"
   }
 }
