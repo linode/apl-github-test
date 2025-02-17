@@ -42,7 +42,7 @@ app.listen(port, () => {
 
 //new feature on v3
 
-//small fix
+// fix
 
 //another fix for 2.1
 // a feature
