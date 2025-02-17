@@ -1,7 +1,7 @@
 {
-  "last-release-sha": "ba7910a3904e0286906bdc700cf96d4597256a01",
   "packages": {
     ".": {
+      "last-release-sha": "ba7910a3904e0286906bdc700cf96d4597256a01",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple",
       "bump-minor-pre-major": false,
