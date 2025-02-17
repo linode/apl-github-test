@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.1](https://github.com/linode/apl-github-test/compare/v4.0.4...v3.0.1) (2025-02-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* major fix ([#18](https://github.com/linode/apl-github-test/issues/18))
+* some more major changes ([#8](https://github.com/linode/apl-github-test/issues/8))
+* some big change ([#4](https://github.com/linode/apl-github-test/issues/4))
+
+### fix
+
+* major fix ([#18](https://github.com/linode/apl-github-test/issues/18)) ([f16dfe6](https://github.com/linode/apl-github-test/commit/f16dfe61f24f83878baa14d1381b44168ff39ab5))
+
+
+### feat
+
+* some big change ([#4](https://github.com/linode/apl-github-test/issues/4)) ([29c1aab](https://github.com/linode/apl-github-test/commit/29c1aab39baed826aa4d7ee30921e1b5f0fd3f5d))
+* some more major changes ([#8](https://github.com/linode/apl-github-test/issues/8)) ([372f37d](https://github.com/linode/apl-github-test/commit/372f37d539e06e013d0ca8887e8d6dafe0e345d1))
+
+
+### Miscellaneous Chores
+
+* release 2.1.1 ([#12](https://github.com/linode/apl-github-test/issues/12)) ([8f0b64e](https://github.com/linode/apl-github-test/commit/8f0b64e8b9fdd35e56965fccfba870d61c23566a))
+* release 3.0.1 ([d865979](https://github.com/linode/apl-github-test/commit/d86597900ab24a74c9eedb7e77d6e38dafcd4031))
+
 ## [4.0.4](https://github.com/linode/apl-github-test/compare/apl-github-test-v4.0.3...apl-github-test-v4.0.4) (2025-02-13)
 
 
