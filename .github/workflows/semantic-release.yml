@@ -1,16 +1,18 @@
+name: Release
+
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-  pull-requests: write
-
-name: release-please
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        type: boolean
+        description: 'Dry run'
+        default: true
 
 jobs:
   release-please:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,5 +22,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release --dry-run=${{ github.event.inputs.dry-run }}
           
