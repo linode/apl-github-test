@@ -1,3 +1,10 @@
+## [4.5.2](https://github.com/linode/apl-github-test/compare/v4.5.1...v4.5.2) (2025-02-18)
+
+
+### Bug Fixes
+
+* small fix ([70d3833](https://github.com/linode/apl-github-test/commit/70d383398a97e1f7c990a27fce060372d3a8c2cc))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
