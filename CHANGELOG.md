@@ -1,3 +1,10 @@
+## [5.2.1](https://github.com/linode/apl-github-test/compare/v5.2.0...v5.2.1) (2025-03-06)
+
+
+### Performance Improvements
+
+* improved performance ([0e50d7a](https://github.com/linode/apl-github-test/commit/0e50d7a656823fc3cb274f2c6e8c78d712abad7f))
+
 # [5.2.0](https://github.com/linode/apl-github-test/compare/v5.1.0...v5.2.0) (2025-03-06)
 
 
