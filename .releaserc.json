@@ -22,8 +22,8 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["CHANGELOG.md", "package.json"],
-        "message": "chore(release): ${nextRelease.version} CHANGELOG.md and package.json update [skip ci]\n\n${nextRelease.notes}"
+        "assets": ["CHANGELOG.md", "package.json", "package-lock.json"],
+        "message": "chore(release): ${nextRelease.version} CHANGELOG.md, package.json and package-lock.json update [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     "@semantic-release/github"
