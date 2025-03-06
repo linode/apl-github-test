@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/linode/apl-github-test/compare/v5.1.0...v5.2.0) (2025-03-06)
+
+
+### Features
+
+* added new feature ([af8e03e](https://github.com/linode/apl-github-test/commit/af8e03ed0b1d0250b7cf929f52dcb3ff129ff04e))
+
 # [5.1.0](https://github.com/linode/apl-github-test/compare/v5.0.0...v5.1.0) (2025-03-06)
 
 
