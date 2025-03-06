@@ -1,6 +1,6 @@
 {
   "branches": [
-    "releases/rel-\\d+\\.\\d+",
+    "releases/rel-*",
     "main"
   ],
   "plugins": [
