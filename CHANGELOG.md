@@ -1,3 +1,10 @@
+## [4.5.4](https://github.com/linode/apl-github-test/compare/v4.5.3...v4.5.4) (2025-03-06)
+
+
+### Bug Fixes
+
+* small fix ([2f32c02](https://github.com/linode/apl-github-test/commit/2f32c021921d254aa9c2d6236b9274fbae3fe33b))
+
 ## [4.5.3](https://github.com/linode/apl-github-test/compare/v4.5.2...v4.5.3) (2025-03-06)
 
 
