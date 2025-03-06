@@ -1,3 +1,10 @@
+# [4.6.0](https://github.com/linode/apl-github-test/compare/v4.5.4...v4.6.0) (2025-03-06)
+
+
+### Features
+
+* a new awsome feature ([7939ca3](https://github.com/linode/apl-github-test/commit/7939ca345faa3e98fd98c6ebc6a851c00ab272c6))
+
 ## [4.5.4](https://github.com/linode/apl-github-test/compare/v4.5.3...v4.5.4) (2025-03-06)
 
 
