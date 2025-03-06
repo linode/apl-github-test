@@ -1,3 +1,16 @@
+# [5.0.0](https://github.com/linode/apl-github-test/compare/v4.6.0...v5.0.0) (2025-03-06)
+
+
+### Features
+
+* breaking change ([8af17e3](https://github.com/linode/apl-github-test/commit/8af17e310959267bb24d26ff9af6a234355079f9))
+* breaking change \n\nBREAKING CHANGE: a breaking change ([eed9a8c](https://github.com/linode/apl-github-test/commit/eed9a8ca3756c1913e053b69472ff8d4ed44a1a2))
+
+
+### BREAKING CHANGES
+
+* a breaking change
+
 # [4.6.0](https://github.com/linode/apl-github-test/compare/v4.5.4...v4.6.0) (2025-03-06)
 
 
