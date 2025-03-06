@@ -1,3 +1,16 @@
+# [5.3.0](https://github.com/linode/apl-github-test/compare/v5.2.1...v5.3.0) (2025-03-06)
+
+
+### Bug Fixes
+
+* a small fix ([54187e8](https://github.com/linode/apl-github-test/commit/54187e86f92fa19548be6ee6aad6418fa6d2cafa))
+* fixed smsth in the new function ([f91b16c](https://github.com/linode/apl-github-test/commit/f91b16c95caf3e35793e79fc0425c9bce0aca881))
+
+
+### Features
+
+* added new functions ([cf0ca6b](https://github.com/linode/apl-github-test/commit/cf0ca6bc59f4570e63659597057e42e8520dc795))
+
 ## [5.2.1](https://github.com/linode/apl-github-test/compare/v5.2.0...v5.2.1) (2025-03-06)
 
 
