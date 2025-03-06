@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/linode/apl-github-test/compare/v5.0.0...v5.1.0) (2025-03-06)
+
+
+### Features
+
+* added a new feature ([c5dff64](https://github.com/linode/apl-github-test/commit/c5dff6471e42f6a585b17eadba9b3225618172e2))
+
 # [5.0.0](https://github.com/linode/apl-github-test/compare/v4.6.0...v5.0.0) (2025-03-06)
 
 
