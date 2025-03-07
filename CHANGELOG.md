@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/linode/apl-github-test/compare/v5.1.1...v5.1.2) (2025-03-07)
+
+
+### Bug Fixes
+
+* fixed smsth in the new function ([e1ae03e](https://github.com/linode/apl-github-test/commit/e1ae03e445bcf03ea344f395c7020c7ba96a2453))
+
 ## [5.1.1](https://github.com/linode/apl-github-test/compare/v5.1.0...v5.1.1) (2025-03-06)
 
 
