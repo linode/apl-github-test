@@ -17,6 +17,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Set current branch
+        run: |
+          # Update the .releaserc.json file with the current branch name
+          current_branch=$(git branch --show-current)
+          jq --arg branch "$current_branch" '.branches |= map(if . == "CURRENT_BRANCH" then $branch else . end)' .releaserc.json > .releaserc.json.tmp
+          mv .releaserc.json.tmp .releaserc.json
       - name: Install dependencies
         run: npm clean-install
       - name: Release
