@@ -1,8 +1,5 @@
 {
-  "branches": [
-    "releases/rel-\\d+\\.\\d+",
-    "main"
-  ],
+  "branches": ["CURRENT_BRANCH", "main"],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
