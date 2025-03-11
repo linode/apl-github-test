@@ -38,5 +38,6 @@
       }
     ],
     "@semantic-release/github"
-  ]
+  ],
+  "addChannel": ["@semantic-release/github"]
 }
