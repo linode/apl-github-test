@@ -1,3 +1,10 @@
+# [5.7.0](https://github.com/linode/apl-github-test/compare/v5.6.0...v5.7.0) (2025-03-11)
+
+
+### Features
+
+* major rework ([f3511f3](https://github.com/linode/apl-github-test/commit/f3511f317df9156ea178e0fe0df21e095a1e6373))
+
 # [5.6.0](https://github.com/linode/apl-github-test/compare/v5.5.1...v5.6.0) (2025-03-11)
 
 
