@@ -9,7 +9,7 @@ on:
         default: true
 
 jobs:
-  release-please:
+  semantic-release:
     permissions:
       contents: write
       pull-requests: write
