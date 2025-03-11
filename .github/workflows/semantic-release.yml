@@ -19,9 +19,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Set current branch
         run: |
-          # Update the .releaserc.json file with the current branch name
+          # Update the .releaserc.json file with the current branch name. 
+          # Needed for semantic-release to work with maintenace branches.
+
           current_branch=$(git branch --show-current)
-          jq --arg branch "$current_branch" '.branches |= map(if . == "CURRENT_BRANCH" then $branch else . end)' .releaserc.json > .releaserc.json.tmp
+          range="${current_branch#release/rel-}.x"
+
+          jq --arg branch "$current_branch" --arg range "$range" '
+            .branches |= map(if type == "object" and .name == "CURRENT_BRANCH"
+              then .name = $branch | .range = $range
+              else . end)' \
+            .releaserc.json > .releaserc.json.tmp
+
           mv .releaserc.json.tmp .releaserc.json
       - name: Install dependencies
         run: npm clean-install
