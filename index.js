@@ -16,12 +16,5 @@ app.listen(port, () => {
 // a new feature
 //a new fix
 // a fix
-// a new fix
-// a new feature
-// a new feature with a breaking change
-// a feature
-// a new feature
-// a new performance improvement
-// a fix 
-// added new feature
+// MAJOR REWORK : Breaking changes!!!
 // a small fix 
