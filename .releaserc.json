@@ -1,5 +1,19 @@
 {
-  "branches": ["releases/rel-*", "main"],
+  "branches": [
+    {
+      "name": "main",
+      "prerelease": false
+    },
+    {
+      "name": "CURRENT_BRANCH",
+      "range": "RANGE",
+      "prerelease": false
+    },
+    {
+      "name": "pre/rc",
+      "prerelease": true
+    }
+    ],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
