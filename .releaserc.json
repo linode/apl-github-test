@@ -11,8 +11,8 @@
     },
     {
       "name": "pre/rc",
-      "prerelease": "rc",
-      "channel": "pre/rc"
+      "range": "5.3.x",
+      "prerelease": true
     }
     ],
   "plugins": [
@@ -39,7 +39,10 @@
       }
     ],
     [
-      "@semantic-release/github"
-    ]
+      "@semantic-release/github",
+      {
+        "addChannel": ["maintenance"]
+      }
+  ]
   ]
 }
