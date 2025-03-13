@@ -11,7 +11,7 @@
     },
     {
       "name": "pre/rc",
-      "prerelease": true
+      "prerelease": "pre/rc"
     }
     ],
   "plugins": [
