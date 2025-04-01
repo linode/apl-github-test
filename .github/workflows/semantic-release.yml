@@ -24,6 +24,7 @@ jobs:
 
           current_branch=$(git branch --show-current)
           if [[ $current_branch == "pre/rc" ]]; then
+            echo "Skipping releaserc for pre/rc branch"
             exit 0
           fi
           range="${current_branch#release/rel-}.x"
