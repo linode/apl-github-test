@@ -8,3 +8,5 @@
 // another new feature
 // a fix for the new feature
 // another fix is needed
+
+// a new feature
