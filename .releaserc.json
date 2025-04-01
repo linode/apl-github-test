@@ -4,6 +4,9 @@
       "name": "main"
     },
     {
+      "name": "release"
+    },
+    {
       "name": "CURRENT_BRANCH",
       "range": "RANGE"
     },
