@@ -12,6 +12,20 @@
 * a parallel feat in main ([a9da160](https://github.com/linode/apl-github-test/commit/a9da160c06ee1face78a17fb8360c5150e920dc4))
 * another new feature ([48f5b5f](https://github.com/linode/apl-github-test/commit/48f5b5fdb10733500891c496e1ac855ecb57d57e))
 
+# [5.10.0](https://github.com/linode/apl-github-test/compare/v5.9.0...v5.10.0) (2025-04-01)
+
+
+### Bug Fixes
+
+* added a small fix ([f621187](https://github.com/linode/apl-github-test/commit/f62118755caaab2e77136a740e6e7441908279b3))
+* added small fix ([a586525](https://github.com/linode/apl-github-test/commit/a586525d5240a17b8ca850645c2f1ed384aae0a6))
+
+
+### Features
+
+* a parallel feat in main ([a9da160](https://github.com/linode/apl-github-test/commit/a9da160c06ee1face78a17fb8360c5150e920dc4))
+* another new feature ([48f5b5f](https://github.com/linode/apl-github-test/commit/48f5b5fdb10733500891c496e1ac855ecb57d57e))
+
 # [5.9.0](https://github.com/linode/apl-github-test/compare/v5.8.0...v5.9.0) (2025-04-01)
 
 
