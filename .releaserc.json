@@ -4,7 +4,10 @@
       "name": "main"
     },
     {
-      "name": "release"
+      "name": "major"
+    },
+    {
+      "name": "minor"
     },
     {
       "name": "CURRENT_BRANCH",
