@@ -12,7 +12,7 @@
     {
       "name": "pre/rc",
       "range": "5.3.x",
-      "prerelease": true
+      "prerelease": "rc"
     }
     ],
   "plugins": [
