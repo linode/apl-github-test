@@ -6,3 +6,4 @@
 // minor fix
 
 // another new feature
+// a fix for the new feature
