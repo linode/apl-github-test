@@ -4,12 +4,6 @@
       "name": "main"
     },
     {
-      "name": "major"
-    },
-    {
-      "name": "minor"
-    },
-    {
       "name": "CURRENT_BRANCH",
       "range": "RANGE"
     },
