@@ -1,6 +1,6 @@
 {
   "name": "apl-github-test",
-  "version": "5.9.0",
+  "version": "5.10.0-rc.1",
   "description": "",
   "main": "index.js",
   "scripts": {
