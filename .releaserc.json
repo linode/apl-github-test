@@ -4,8 +4,7 @@
       "name": "main"
     },
     {
-      "name": "CURRENT_BRANCH",
-      "range": "RANGE"
+      "name": "CURRENT_BRANCH"
     },
     {
       "name": "pre/rc",
