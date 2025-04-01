@@ -1,3 +1,16 @@
+# [5.9.0-rc.1](https://github.com/linode/apl-github-test/compare/v5.8.0...v5.9.0-rc.1) (2025-04-01)
+
+
+### Bug Fixes
+
+* added a fix ([b0fb908](https://github.com/linode/apl-github-test/commit/b0fb908572ead6e4609656d9d3c0e46c7a882d0b))
+* minor fix backportable to v5.7 ([6fc45bd](https://github.com/linode/apl-github-test/commit/6fc45bdf9254a455ad6cad7a6dfe91dc62eb6db7))
+
+
+### Features
+
+* added a new feature ([8daa8ff](https://github.com/linode/apl-github-test/commit/8daa8ffb4d0dda055dcf8fac42a2e31297da3209))
+
 # [5.8.0](https://github.com/linode/apl-github-test/compare/v5.7.1...v5.8.0) (2025-04-01)
 
 
