@@ -1,11 +1,7 @@
 {
   "branches": [
-    {
-      "name": "main"
-    },
-    {
-      "name": "CURRENT_BRANCH"
-    },
+    "main",
+    "CURRENT_BRANCH",
     {
       "name": "pre/rc",
       "prerelease": "rc"
