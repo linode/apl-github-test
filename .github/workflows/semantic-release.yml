@@ -23,6 +23,9 @@ jobs:
           # Needed for semantic-release to work with maintenace branches.
 
           current_branch=$(git branch --show-current)
+          if [[ $current_branch == "pre/rc" ]]; then
+            exit 0
+          fi
           range="${current_branch#release/rel-}.x"
 
           jq --arg branch "$current_branch" --arg range "$range" '
