@@ -29,5 +29,9 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --dry-run=${{ github.event.inputs.dry-run }}
+        run: |
+          echo "Running semantic-release with the following configuration:"
+          cat .releaserc.json
+          echo "#####-----------------------------------------------#####"
+          npx semantic-release --dry-run=${{ github.event.inputs.dry-run }}
           
