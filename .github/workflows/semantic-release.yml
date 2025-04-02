@@ -32,15 +32,16 @@ jobs:
               then .name = $branch | .range = $range
               else . end)' \
             .releaserc.json > .releaserc.json.tmp
+            mv .releaserc.json.tmp .releaserc.json
           elif [[ $current_branch =~ ^release-v[0-9]+\.[0-9]+\.0$ ]]; then
             jq --arg branch "$current_branch" '
             .branches |= map(if type == "object" and .name == "RELEASE_BRANCH"
               then .name = $branch
               else . end)' \
             .releaserc.json > .releaserc.json.tmp
+            mv .releaserc.json.tmp .releaserc.json
           fi
 
-          mv .releaserc.json.tmp .releaserc.json
       - name: Install dependencies
         run: npm clean-install
       - name: Release
