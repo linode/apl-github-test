@@ -4,7 +4,10 @@
       "name": "main"
     },
     {
-      "name": "CURRENT_BRANCH",
+      "name": "RELEASE_BRANCH"
+    },
+    {
+      "name": "MAINTENANCE_BRANCH",
       "range": "RANGE"
     },
     {

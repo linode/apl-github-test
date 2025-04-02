@@ -24,17 +24,21 @@ jobs:
           # https://github.com/semantic-release/semantic-release/issues/2503
 
           current_branch=$(git branch --show-current)
-          if [[ $current_branch == "pre/rc" ]]; then
-            echo "Skipping releaserc for pre/rc branch"
-            exit 0
-          fi
-          range="${current_branch#release/rel-}.x"
-
-          jq --arg branch "$current_branch" --arg range "$range" '
-            .branches |= map(if type == "object" and .name == "CURRENT_BRANCH"
+          #Checking is current_branch starts with backports-vX.X
+          if [[ $current_branch =~ ^backports-v[0-9]+\.[0-9]+$ ]]; then
+            range="${current_branch#backports-}.x"
+            jq --arg branch "$current_branch" --arg range "$range" '
+            .branches |= map(if type == "object" and .name == "MAINTENANCE_BRANCH"
               then .name = $branch | .range = $range
               else . end)' \
             .releaserc.json > .releaserc.json.tmp
+          elif [[ $current_branch =~ ^release-v[0-9]+\.[0-9]+\.0$ ]]; then
+            jq --arg branch "$current_branch" '
+            .branches |= map(if type == "object" and .name == "RELEASE_BRANCH"
+              then .name = $branch
+              else . end)' \
+            .releaserc.json > .releaserc.json.tmp
+          fi
 
           mv .releaserc.json.tmp .releaserc.json
       - name: Install dependencies
@@ -47,4 +51,15 @@ jobs:
           cat .releaserc.json
           echo "#####-----------------------------------------------#####"
           npx semantic-release --dry-run=${{ github.event.inputs.dry-run }}
+          
+          # If branch is a release branch then create the respective backport branch from the release tag after the previous npx command runs successfully.
+          # This is needed to create the backport branch for the next release.
+          if [[ $current_branch =~ ^release-[0-9]+\.[0-9]+\.0$ ]]; then
+            echo "Creating backport branch for next release"
+            # Get the latest tag E.g. v1.0.0
+            latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+            # Create the backport branch
+            git checkout -b backports-${latest_tag%.*}
+            git push origin backports-${latest_tag%.*}
+          fi
           
