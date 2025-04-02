@@ -55,12 +55,17 @@ jobs:
           
           # If branch is a release branch then create the respective backport branch from the release tag after the previous npx command runs successfully.
           # This is needed to create the backport branch for the next release.
-          if [[ $current_branch =~ ^release-[0-9]+\.[0-9]+\.0$ ]]; then
+          if [[ $current_branch =~ ^release-v[0-9]+\.[0-9]+\.0$ ]] && [[ ${{ github.event.inputs.dry-run }} == false ]]; then
             echo "Creating backport branch for next release"
             # Get the latest tag E.g. v1.0.0
             latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
-            # Create the backport branch
-            git checkout -b backports-${latest_tag%.*}
-            git push origin backports-${latest_tag%.*}
+            # Create the backport branch if not already created
+            if git show-ref --verify --quiet refs/heads/backports-${latest_tag%.*}; then
+              echo "Backport branch already exists"
+            else
+              echo "Creating backport branch"
+              git checkout -b backports-${latest_tag%.*}
+              git push origin backports-${latest_tag%.*}
+            fi
           fi
           
