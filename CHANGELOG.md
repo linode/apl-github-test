@@ -1,3 +1,17 @@
+# [5.12.0-rc.1](https://github.com/linode/apl-github-test/compare/v5.11.0...v5.12.0-rc.1) (2025-04-02)
+
+
+### Bug Fixes
+
+* a new fix ment for the 5.12 feat ([afe915f](https://github.com/linode/apl-github-test/commit/afe915f75d1ce7ba59750d9db3f02c0334a5b3ce))
+* fix number 1 ([f657695](https://github.com/linode/apl-github-test/commit/f657695b4f41386b1858ad61ef7e21c919a2acd7))
+
+
+### Features
+
+* a new feature ment for 5.12 ([a16c09d](https://github.com/linode/apl-github-test/commit/a16c09d1d9b5d9db2d061af073b9071c0dfa0213))
+* a new feature ment for 5.12 ([215ced7](https://github.com/linode/apl-github-test/commit/215ced717cb07757627f8290b247fabc0f725e8a))
+
 # [5.11.0](https://github.com/linode/apl-github-test/compare/v5.10.0...v5.11.0) (2025-04-02)
 
 
