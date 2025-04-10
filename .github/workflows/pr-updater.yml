@@ -40,7 +40,7 @@ jobs:
 
           echo "-----------------Git status----------------------------"
           git status
-          echo "-----------------Git status----------------------------"
+          echo "-----------------Git status------------------------------"
 
           while IFS=$'\t' read -r number branch; do
             echo "Updating PR #$number (branch: $branch)"
