@@ -6,7 +6,8 @@ on:
       - main
 permissions:
   pull-requests: write
-  contents: read
+  contents: write
+  actions: write
 
 jobs:
   autoupdate:
@@ -16,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.PR_UPDATE_TOKEN }}
 
       - name: Install GitHub CLI
         run: |
@@ -33,10 +35,6 @@ jobs:
       - name: Update PR branches
         run: |
           prs=$(gh pr list --state open --base main --json number,headRefName -q '.[] | [.number, .headRefName] | @tsv')
-
-          echo "-----------------Git config----------------------------"
-          git config --list
-          echo "-----------------Git config----------------------------"
 
           echo "-----------------Git status----------------------------"
           git status
