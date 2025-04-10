@@ -34,10 +34,6 @@ jobs:
         run: |
           prs=$(gh pr list --state open --base main --json number,headRefName -q '.[] | [.number, .headRefName] | @tsv')
 
-          echo "-----------------Git config----------------------------"
-          git config --list
-          echo "-----------------Git config----------------------------"
-
           echo "-----------------Git status----------------------------"
           git status
           echo "-----------------Git status----------------------------"
