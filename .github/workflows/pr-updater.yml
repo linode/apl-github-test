@@ -19,5 +19,6 @@ jobs:
 
       - name: Update ALL THE PRS! 🎉
         uses: castastrophe/actions-pr-auto-update@v1.1.0
-
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
