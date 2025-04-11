@@ -36,10 +36,6 @@ jobs:
         run: |
           prs=$(gh pr list --state open --base main --json number,headRefName -q '.[] | [.number, .headRefName] | @tsv')
 
-          echo "-----------------Git status----------------------------"
-          git status
-          echo "-----------------Git status------------------------------"
-
           while IFS=$'\t' read -r number branch; do
             echo "Updating PR #$number (branch: $branch)"
 
@@ -47,9 +43,7 @@ jobs:
             git checkout "$branch"
 
             if git merge origin/main --no-edit; then
-              echo "git remote set-url origin https://x-access-token:${{ secrets.PR_UPDATE_TOKEN }}@github.com/${{ github.repository }}.git"
-              git remote set-url origin https://x-access-token:${{ secrets.PR_UPDATE_TOKEN }}@github.com/${{ github.repository }}.git
-              git push origin HEAD:$branch
+              git push https://x-access-token:${{ secrets.PR_UPDATE_TOKEN }}@github.com/${{ github.repository }}.git HEAD:$branch
               echo "✅ Updated $branch"
             else
               echo "❌ Merge conflict on $branch — skipped."
