@@ -5,9 +5,8 @@ on:
     branches:
       - main
 permissions:
-  pull-requests: write
-  contents: write
-  actions: write
+  contents: write # needed so that the action can push to the PR branches
+  actions: write # needed in case .github/workflows/* files are updated
 
 jobs:
   autoupdate:
