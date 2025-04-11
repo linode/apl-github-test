@@ -1,0 +1,91 @@
+name: Release Candidate Management
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Commit SHA to build RC from (defaults to latest)'
+        required: false
+        type: string
+      base_version:
+        description: 'Base version number (e.g., 1.0)'
+        required: true
+        type: string
+      action:
+        description: 'Action to perform'
+        required: true
+        type: choice
+        options:
+          - create
+          - patch
+
+env:
+  RELEASE_BRANCH_PREFIX: 'release/'
+
+jobs:
+  manage-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine version number
+        id: version
+        run: |
+          if [ "${{ inputs.action }}" == "create" ]; then
+            echo "version=${{ inputs.base_version }}.0-rc.1" >> $GITHUB_OUTPUT
+          else
+            # Find latest RC version for this base
+            LATEST_RC=$(git tag -l "${{ inputs.base_version }}.*-rc.*" | sort -V | tail -n 1)
+            if [ -z "$LATEST_RC" ]; then
+              echo "No existing RC found for version ${{ inputs.base_version }}"
+              exit 1
+            fi
+            
+            # Increment RC number
+            CURRENT_RC_NUMBER=$(echo $LATEST_RC | sed -n 's/.*-rc\.\([0-9]*\)/\1/p')
+            NEW_RC_NUMBER=$((CURRENT_RC_NUMBER + 1))
+            echo "version=${{ inputs.base_version }}.0-rc.$NEW_RC_NUMBER" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create release branch
+        if: inputs.action == 'create'
+        run: |
+          COMMIT_SHA="${{ inputs.commit_sha || github.sha }}"
+          RELEASE_BRANCH="${{ env.RELEASE_BRANCH_PREFIX }}v${{ steps.version.outputs.version }}"
+          git checkout -b $RELEASE_BRANCH $COMMIT_SHA
+          git push origin $RELEASE_BRANCH
+          echo "Created release branch $RELEASE_BRANCH from commit $COMMIT_SHA"
+
+      - name: Patch release
+        if: inputs.action == 'patch'
+        run: |
+          LATEST_RC=$(git tag -l "${{ inputs.base_version }}.*-rc.*" | sort -V | tail -n 1)
+          RELEASE_BRANCH="${{ env.RELEASE_BRANCH_PREFIX }}v$LATEST_RC"
+          
+          # Checkout the release branch
+          git checkout $RELEASE_BRANCH
+          
+          # Cherry-pick the current commit (or specified commit)
+          COMMIT_SHA="${{ inputs.commit_sha || github.sha }}"
+          git cherry-pick $COMMIT_SHA
+          
+          # Push changes
+          git push origin $RELEASE_BRANCH
+          echo "Patched release branch $RELEASE_BRANCH with commit $COMMIT_SHA"
+
+      - name: Tag release
+        run: |
+          git tag v${{ steps.version.outputs.version }}
+          git push origin v${{ steps.version.outputs.version }}
+          echo "Created tag v${{ steps.version.outputs.version }}"
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          release_name: Release Candidate v${{ steps.version.outputs.version }}
+          draft: false
+          prerelease: true
