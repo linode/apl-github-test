@@ -43,7 +43,7 @@ jobs:
             git checkout "$branch"
 
             if git merge origin/main --no-edit; then
-              git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:$branch
+              git push origin HEAD:$branch
               echo "✅ Updated $branch"
             else
               echo "❌ Merge conflict on $branch — skipped."
