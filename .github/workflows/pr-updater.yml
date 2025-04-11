@@ -33,6 +33,6 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
       - name: Update ALL THE PRS! 🎉
-        uses: castastrophe/actions-pr-auto-update
+        uses: castastrophe/actions-pr-auto-update@v1.1.0
 
 
